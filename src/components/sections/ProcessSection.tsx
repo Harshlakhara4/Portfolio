@@ -73,8 +73,8 @@ export function ProcessSection() {
               <motion.div
                 key={step.number}
                 className="relative flex gap-5 pl-0"
-                initial={reduce ? false : { opacity: 0, x: 16 }}
-                whileInView={{ opacity: 1, x: 0 }}
+                initial={reduce ? false : { opacity: 0, x: 16, scale: 0.94 }}
+                whileInView={{ opacity: 1, x: 0, scale: 1 }}
                 viewport={{ once: true, amount: 0.4 }}
                 transition={{ duration: 0.5, delay: i * 0.08 }}
               >

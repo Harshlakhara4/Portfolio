@@ -145,12 +145,22 @@ export function Navbar() {
               </span>
             )}
 
+            {/* Desktop CTA — opens the inquiry modal */}
             <Button
               size="sm"
-              className="hidden sm:inline-flex"
+              className="hidden lg:inline-flex"
               onClick={() => open({ title: "Let's Work Together" })}
             >
               Let&apos;s Work Together
+            </Button>
+
+            {/* Mobile CTA — jumps straight to the contact section */}
+            <Button
+              size="sm"
+              className="lg:hidden"
+              onClick={() => go("contact")}
+            >
+              Contact Me
             </Button>
 
             {/* Mobile menu toggle */}

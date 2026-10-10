@@ -4,6 +4,7 @@ import { Github, Linkedin, Mail, ArrowUp, type LucideIcon } from "lucide-react";
 import { profile, buildWhatsAppLink } from "@/data/profile";
 import { navLinks } from "@/data/nav";
 import { Container } from "@/components/ui/Container";
+import { Reveal } from "@/components/ui/Reveal";
 import { scrollToSection } from "@/lib/utils";
 
 const socialIconMap: Record<string, LucideIcon> = {
@@ -19,7 +20,8 @@ export function Footer() {
   return (
     <footer className="relative border-t border-white/10 bg-ink-900">
       <Container className="py-14">
-        <div className="grid gap-10 md:grid-cols-[1.5fr_1fr_1fr]">
+        <Reveal>
+          <div className="grid gap-10 md:grid-cols-[1.5fr_1fr_1fr]">
           {/* Brand */}
           <div className="max-w-sm">
             <button
@@ -104,7 +106,8 @@ export function Footer() {
               )}
             </ul>
           </div>
-        </div>
+          </div>
+        </Reveal>
 
         <div className="mt-12 flex flex-col items-center justify-between gap-4 border-t border-white/5 pt-6 sm:flex-row">
           <p className="text-xs text-cloud-dim">

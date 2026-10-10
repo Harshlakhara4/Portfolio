@@ -29,7 +29,13 @@ export function FAQSection() {
             const btnId = `${baseId}-faq-btn-${i}`;
             const panelId = `${baseId}-faq-panel-${i}`;
             return (
-              <div key={faq.question}>
+              <motion.div
+                key={faq.question}
+                initial={reduce ? false : { opacity: 0, y: 14, scale: 0.98 }}
+                whileInView={{ opacity: 1, y: 0, scale: 1 }}
+                viewport={{ once: true, amount: 0.4 }}
+                transition={{ duration: 0.5, delay: i * 0.05, ease: [0.22, 1, 0.36, 1] }}
+              >
                 <h3>
                   <button
                     id={btnId}
@@ -70,7 +76,7 @@ export function FAQSection() {
                     </motion.div>
                   )}
                 </AnimatePresence>
-              </div>
+              </motion.div>
             );
           })}
         </div>
